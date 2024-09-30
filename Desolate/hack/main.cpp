@@ -12,16 +12,16 @@ DWORD WINAPI OnDLLAttach(LPVOID lpParameter)
 	static char login[32] = "", password[32] = "";
 
 	char temp[256];
-	if (data.get_registry((char*)"Software\\shark", (char*)"username", temp))
-		data.get_registry((char*)"Software\\shark", (char*)"username", login);
-	if (data.get_registry((char*)"Software\\shark", (char*)"password", temp))
-		data.get_registry((char*)"Software\\shark", (char*)"password", password);
+	if (data.get_registry((char*)"Software\\Desolate", (char*)"username", temp))
+		data.get_registry((char*)"Software\\Desolate", (char*)"username", login);
+	if (data.get_registry((char*)"Software\\Desolate", (char*)"password", temp))
+		data.get_registry((char*)"Software\\Desolate", (char*)"password", password);
 
 	while (!GetModuleHandleA("serverbrowser.dll"))
 		Sleep(200);
 
-	console::initialize("sharkhack");
-	console::log("sharkhack\n");
+	console::initialize("Desolate");
+	console::log("Desolate\n");
 
 	//if (api->auth(login, password))
 	//{
